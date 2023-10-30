@@ -1,0 +1,152 @@
+body {
+    background-color: rgb(174, 202, 224);
+    margin: 0;
+    font-size: smaller;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
+
+.título {
+    text-decoration: underline;
+    text-align: center;
+    margin-top: 5%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(20, 65, 100);
+    font-size: 41px;
+    color: aliceblue;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.Conteudo {
+    margin: 5%;
+    background-color: rgb(126, 156, 180);
+    border: solid 2px black;
+    border-radius: 20px;
+}
+
+li {
+    text-decoration: underline;
+    font-size: 40px;
+    color:aliceblue;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color:rgb(20, 65, 100);
+}
+
+.item {
+    border-radius: 20px;
+    padding: 10px;
+    border: solid black;
+    background: rgb(70, 133, 182);
+    text-align: center;
+}
+
+.subgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 20px;
+    border: solid black;
+    margin: 5px;
+
+}
+
+.grid-template-columns-2 {
+    grid-template-columns: 1fr 2fr;
+    
+}
+
+.grid-template-columns-3 {
+    grid-template-columns: 1fr 2fr 1fr;
+   
+}
+
+.grid-template-columns-4 {
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 7%;
+    margin-top: 3%;
+    padding: 5%;
+}
+
+.grid-template-rows-1 {
+    grid-template-rows: 50px 100px 50px 150px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-template-areas-1 {
+    grid-template-areas:
+        "logo nav nav"
+        "sidenav content advert"
+        "sidenav footer footer"
+    ;
+}
+
+/*5- grid-template*/
+.grid-template-1 { 
+    grid-template: 50px 1fr / 150px 1fr 150px;
+}
+
+.grid-template-2 {
+    grid-template:
+        "logo nav nav" 50px
+        "sidenav content advert" 150px
+        "sidenav footer footer" 100px
+        / 150px 1fr 100px;
+}
+
+/* Estilos Gerais */
+
+
+.grid {
+    display: grid;
+    gap: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 20px;
+}
+
+.content {
+    grid-area: content;
+}
+
+.nav{
+    grid-area: nav;
+}
+
+.sidenav {
+    grid-area: sidenav;
+}
+
+.advert {
+    grid-area: advert;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+/*destacar texto*/
+strong{    
+    color:rgb(20, 65, 100);
+    font-size: 30px;
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.strong{    
+    color:rgb(20, 65, 100);
+    font-size: 30px;
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius: 20px;
+    width: 500px;
+}
+
+/*rodapé*/
+footer {
+    background-color: rgb(126, 156, 180);
+    text-align: center;
+    border-top: solid black;
+}

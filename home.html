@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <title>Autoria Web</title>
+</head>
+
+<body>
+    <h1 class="título">Diplay: grid<h1>
+            <Fieldset class="Conteudo">
+                <p>O Grid Container é uma tag que envolve itens do grid, ao indicar display: grid,
+                    essa tag passa a ser um Grid Container. </p><br>
+                <ol>
+                    <!-- Primeiro item da lista ordenada -->
+                    <li> 
+                        Display
+                    </li>
+                    <p>A função <strong>display: grid</strong> define um elemento como um Grid Container, exemplos:</p>
+
+                            <!-- inicio do display grid -->
+                            <p>display: grid</p>
+                                <section class="grid">
+                                    <div class="item">Undertale</div>
+                                    <div class="item">Overcooked </div>
+                                    <div class="item">Overcooked 2</div>
+                                    <div class="item">Geoguess</div>
+                                </section>
+                            <br>
+                            <!-- fim do display grid -->
+
+
+                            <!-- Inicio subgrid -->
+                            <p>Subgrids: Serve para por Grids dentro de outras grids, assim criando
+                                "subgrids", basta criar um grid dentro de outro grid</p>
+                                <section class="grid grid-template-columns-3">
+                                    <div class="item">1</div>
+                                    <div class="item">2</div>
+                                    <div class="item">3</div>
+                                    <div class="item">4</div>
+                                    <div class="item">
+                                        <div class="item subgrid">5.1</div>
+                                        <div class="item subgrid">5.2</div>
+                                        <div class="item subgrid">5.3</div>
+                                    </div>
+                                    <div class="item">6</div>
+                                </section>
+                                <br>
+                            <!-- Fim do subgrid -->
+
+                            <!-- Segundo item da lista ordenada -->
+                            <li>
+                                Grid Template Columns
+                            </li>
+                            <!-- Inicio do grid-template-columns -->
+                            <p>Define o número total de colunas que serão inseridas no grid, exemplos:</p><br><br>
+                            <p><strong>grid-template-columns: 1fr 2fr:</strong> Desta forma Duas colunas serão criada, a segunda com o
+                                dobro de tamanho da primeira e o contéudo dentro do grid é respeitado, se o conteudo da
+                                primeira coluna
+                                for maior que o da segunda, a segunda coluna se torna maior.
+                            </p>
+                                <section class="grid grid-template-columns-2">
+                                    <div class="item">Infamous</div>
+                                    <div class="item">Ori</div>
+                                    <div class="item">Uncharted</div>
+                                    <div class="item">F.e.a.r</div>
+                                </section>
+                            <br> <br/>
+                            <!-- Fim do grid-template-columns -->
+
+                            <!-- Inicio do grid-template-columns repeat -->
+                            <p><strong>grid-template-columns: repeat(4, 1fr):</strong> Vai cirar 4 colunar com 1fr de tamanho cada. O
+                                comando repeat seria a mesma coisa que escrever 1fr 1fr 1fr 1fr
+                            </p>
+                                <section class="grid grid-template-columns-4">
+                                    <div class="item">A</div>
+                                    <div class="item">B</div>
+                                    <div class="item">C</div>
+                                    <div class="item">D</div>
+
+                                </section>
+                            <br>
+                            <!-- Inicio do grid-template-columns repeat -->
+
+                            <!-- terceiro item da lista ordenada -->
+                            <li>
+                                Grid Template Rows
+                            </li>
+                            <p>Usado para definir a quantidade de linhas no grid.</p><br>
+                            <p><strong>grid-template-rows: 50px 100px 50px 150px:</strong> Vai criar um grid, sendo a primeira e a
+                                terceira com 50px,
+                                a segunda com 100px e a última com 150px.
+                            </p>
+                            <section class="grid grid-template-rows-1">
+                                <div class="item">1</div>
+                                <div class="item">2</div>
+                                <div class="item">3</div>
+                                <div class="item">4</div>
+                                <div class="item">5</div>
+                                <div class="item">6</div>
+                                <div class="item">7</div>
+                                <div class="item">8</div>
+                            </section>
+                            </div><br/>
+
+                            <!-- Quarto item da lista ordenada -->
+                            <li>
+                                Grid Template Areas
+                            </li>
+                            <p>Usado para definir áreas específicas no grid.</p><br><br>
+                            <div>
+                                <section class="grid grid-template-areas-1">
+                                    <div class="item logo">logo</div>
+                                    <div class="item nav">nav</div>
+                                    <div class="item nav">nav</div>
+                                    <div class="item content">content</div>
+                                    <div class="item sidenav">sidenav</div>
+                                    <div class="item advert">advert</div>
+                                    <div class="item footer">footer</div>
+                                </section>
+                            </div>
+                            <!-- Quinto e último item da lista ordenada -->
+                            <li>
+                                Grid Template
+                            </li>
+                            <p>Usamos o <strong>grid-template</strong> como atalho para definir grid-template, grid-template-rows
+                               e grid-template-areas, por exemplo: </p>
+
+                               <p><strong>grid-template: 50px 1fr / 150px 1fr 150px:</strong>
+                                linhas: altura-50px, largura-1fr / colunas largura: 1° coluna, 2° coluna, 3° coluna.</p>
+                                <section class="grid grid-template-1">
+                                    <div class="item">logo</div>
+                                    <div class="item">nav</div>
+                                    <div class="item">content</div>
+                                    <div class="item">sidenav</div>
+                                    <div class="item">advert</div>
+                                    <div class="item">footer</div>
+                                </section>
+                                <br><br>
+
+                                <div class="strong">grid-template: <br/>
+                                    "logo nav nav" 50px <br/>
+                                    "sidenav content advert" 150px <br/>
+                                    "sidenav footer footer" 100px <br/>
+                                    / 100px 1fr 50px;</div> <br/>
+                                    <p>linhas: define as alturas das classes / colunas largura: 1° coluna, 2° coluna, 3° coluna.</p>
+
+                                    <section class="grid grid-template-2">
+                                        <div class="item logo">logo</div>
+                                        <div class="item nav">nav</div>
+                                        <div class="item content">content</div>
+                                        <div class="item sidenav">sidenav</div>
+                                        <div class="item advert">advert</div>
+                                        <div class="item footer">footer</div>
+                                    </section>
+                                   
+                </ol><br><br>
+                <p>Ainda tem muitos outros comandos que podemos usar com o Grid container como o 
+                <strong>justify-content</strong> para alinhar os itens  do grid na horizontal, <strong>o align-Items</strong>
+                   para alinhar os itens dentro do grid entre muitos outros. 
+                </p>
+
+            </Fieldset>
+            <footer>
+                <img src="Imagens/LogoIFRN.png" height="100px" width="auto">
+            </footer>
+</body>
+</html>
